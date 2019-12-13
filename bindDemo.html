@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="http://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+         <a>{{server.name}}</a>
+         <br/>
+         <input type="radio" value="baidu" name="web"v-on:click="change"/>baidu
+         <input type="radio" value="sina" name="web"v-on:click="change"/>sina
+         <input type="radio" value="tt" name="web"v-on:click="change"/>tt
+         <!--  -->
+    </div>
+    <script>
+        var app = new Vue({
+            el:"#app",
+            data:{
+                server:{
+                    name:"",
+                    address:""
+                },
+                ename:""
+            },
+            //methods中存放的是被当前vue实例调用的方法的集合
+            methods:{
+                change:function(){
+                    alert(app.ename);//this就是调用这个方法的调用者对象，在这里this就是vue实例，
+                }
+            }
+        });
+    </script>
+</body>
+</html>

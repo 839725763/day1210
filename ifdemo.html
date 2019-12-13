@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="http://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"> 
+         <input type="radio"value="lin"name="star" v-model="name"/> 林书豪
+         <input type="radio"value="zhu"name="star" v-model="name"/> 猪翼龙
+         <input type="radio"value="qiao"name="star" v-model="name"/> 桥必罗
+         <img v-if="name=='lin'" style="width:500px;height: 500px" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1575976902885&di=6131a0ce6567dc7230f9951af6ccc941&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fpic%2F9%2Ff8%2F87f21148886.jpg"/>
+         <img v-else-if="name=='zhu'"style="width:500px;height: 500px" src="https://gss1.bdstatic.com/-vo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike116%2C5%2C5%2C116%2C38/sign=bc882c916d59252db71a155655f2685e/902397dda144ad343cf3490cdda20cf430ad85e9.jpg"/>
+         <img v-else-if="name=='qiao'"style="width:500px;height: 500px" src="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike116%2C5%2C5%2C116%2C38/sign=f5b4d2faab0f4bfb98dd960662261395/f9198618367adab43d5ba62684d4b31c8601e4c8.jpg"/>
+    </div>
+    <script>
+        var app = new Vue({
+            el:"#app",
+            data:{
+                show:false,
+                name:""
+            }
+        })
+    </script>
+</body>
+</html>
